@@ -1,0 +1,4 @@
+C:\Users\Эмиль\Documents\Visual Studio 2012\Projects\EPAM NET Express\Game\Entity\bin\Debug\Entity.dll
+C:\Users\Эмиль\Documents\Visual Studio 2012\Projects\EPAM NET Express\Game\Entity\bin\Debug\Entity.pdb
+C:\Users\Эмиль\Documents\Visual Studio 2012\Projects\EPAM NET Express\Game\Entity\obj\Debug\Entity.dll
+C:\Users\Эмиль\Documents\Visual Studio 2012\Projects\EPAM NET Express\Game\Entity\obj\Debug\Entity.pdb

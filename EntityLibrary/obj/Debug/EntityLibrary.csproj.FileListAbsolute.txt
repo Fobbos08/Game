@@ -1,0 +1,11 @@
+C:\Users\Эмиль\Documents\Visual Studio 2012\Projects\EPAM NET Express\Game\EntityLibrary\obj\Debug\EntityLibrary.csprojResolveAssemblyReference.cache
+C:\Users\Эмиль\Documents\Visual Studio 2012\Projects\EPAM NET Express\Game\EntityLibrary\bin\Debug\EntityLibrary.dll
+C:\Users\Эмиль\Documents\Visual Studio 2012\Projects\EPAM NET Express\Game\EntityLibrary\bin\Debug\EntityLibrary.pdb
+C:\Users\Эмиль\Documents\Visual Studio 2012\Projects\EPAM NET Express\Game\EntityLibrary\bin\Debug\Game.dll
+C:\Users\Эмиль\Documents\Visual Studio 2012\Projects\EPAM NET Express\Game\EntityLibrary\bin\Debug\Microsoft.Practices.Unity.dll
+C:\Users\Эмиль\Documents\Visual Studio 2012\Projects\EPAM NET Express\Game\EntityLibrary\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Users\Эмиль\Documents\Visual Studio 2012\Projects\EPAM NET Express\Game\EntityLibrary\bin\Debug\Game.pdb
+C:\Users\Эмиль\Documents\Visual Studio 2012\Projects\EPAM NET Express\Game\EntityLibrary\bin\Debug\Microsoft.Practices.Unity.pdb
+C:\Users\Эмиль\Documents\Visual Studio 2012\Projects\EPAM NET Express\Game\EntityLibrary\bin\Debug\Microsoft.Practices.Unity.xml
+C:\Users\Эмиль\Documents\Visual Studio 2012\Projects\EPAM NET Express\Game\EntityLibrary\obj\Debug\EntityLibrary.dll
+C:\Users\Эмиль\Documents\Visual Studio 2012\Projects\EPAM NET Express\Game\EntityLibrary\obj\Debug\EntityLibrary.pdb

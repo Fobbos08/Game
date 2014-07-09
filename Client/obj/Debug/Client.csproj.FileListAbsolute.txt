@@ -1,0 +1,15 @@
+C:\Users\Эмиль\Documents\Visual Studio 2012\Projects\EPAM NET Express\Game\Client\bin\Debug\Client.exe.config
+C:\Users\Эмиль\Documents\Visual Studio 2012\Projects\EPAM NET Express\Game\Client\bin\Debug\Client.exe
+C:\Users\Эмиль\Documents\Visual Studio 2012\Projects\EPAM NET Express\Game\Client\bin\Debug\Client.pdb
+C:\Users\Эмиль\Documents\Visual Studio 2012\Projects\EPAM NET Express\Game\Client\obj\Debug\Client.csprojResolveAssemblyReference.cache
+C:\Users\Эмиль\Documents\Visual Studio 2012\Projects\EPAM NET Express\Game\Client\obj\Debug\Client.Form1.resources
+C:\Users\Эмиль\Documents\Visual Studio 2012\Projects\EPAM NET Express\Game\Client\obj\Debug\Client.Properties.Resources.resources
+C:\Users\Эмиль\Documents\Visual Studio 2012\Projects\EPAM NET Express\Game\Client\obj\Debug\Client.csproj.GenerateResource.Cache
+C:\Users\Эмиль\Documents\Visual Studio 2012\Projects\EPAM NET Express\Game\Client\obj\Debug\Client.exe
+C:\Users\Эмиль\Documents\Visual Studio 2012\Projects\EPAM NET Express\Game\Client\obj\Debug\Client.pdb
+C:\Users\Эмиль\Documents\Visual Studio 2012\Projects\EPAM NET Express\Game\Client\bin\Debug\Game.dll
+C:\Users\Эмиль\Documents\Visual Studio 2012\Projects\EPAM NET Express\Game\Client\bin\Debug\Game.pdb
+C:\Users\Эмиль\Documents\Visual Studio 2012\Projects\EPAM NET Express\Game\Client\bin\Debug\Microsoft.Practices.Unity.dll
+C:\Users\Эмиль\Documents\Visual Studio 2012\Projects\EPAM NET Express\Game\Client\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Users\Эмиль\Documents\Visual Studio 2012\Projects\EPAM NET Express\Game\Client\bin\Debug\Microsoft.Practices.Unity.pdb
+C:\Users\Эмиль\Documents\Visual Studio 2012\Projects\EPAM NET Express\Game\Client\bin\Debug\Microsoft.Practices.Unity.xml

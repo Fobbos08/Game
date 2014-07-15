@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Drawer;
 
 namespace Client
 {
@@ -16,16 +17,20 @@ namespace Client
     {
         World world;
         Bitmap bitmap;
-        Drawer dr;
+        Drawer.Drawer dr;
+        //Drawer1 dr;
         public Form1()
         {
             InitializeComponent();
             bitmap = new Bitmap(600, 300);
+            dr = new Drawer.Drawer(bitmap); 
+            //dr = new Drawer1(bitmap);
             world = new World(600,300,20,10);
             world.Generate();
-            dr = new Drawer(bitmap);
+            //dr = new Drawer(bitmap);
             pictureBox1.Image = bitmap;
             dr.Draw(world);
+            //dr.Draw(world);
             timer1.Start();
             world.UpdateScoreEvent += UpdateScore;
             
@@ -33,7 +38,7 @@ namespace Client
 
         private void UpdateScore(World w)
         {
-            Action p = delegate() { Score.Text = w.score.ToString(); };
+            Action p = delegate() { Score.Text = w.Score.ToString(); };
             this.Invoke( p, null);
         }
 

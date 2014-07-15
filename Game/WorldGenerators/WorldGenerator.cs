@@ -26,7 +26,7 @@ namespace Game.WorldGenerators
         public World Generate(World world)
         {
             world.map = mapGenerator.Generate(world);
-            for (int i = 0; i <= 20; i++ )
+            for (int i = 0; i < 20; i++ )
                 bonusGenerator.Generate(world);
             world.monsters = monsterGenerator.Generate(world);
             return world;

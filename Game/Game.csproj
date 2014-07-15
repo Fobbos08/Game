@@ -43,9 +43,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bonuses\Bonus.cs" />
+    <Compile Include="Bonuses\BonusCreator.cs" />
     <Compile Include="Bonuses\BonusDecorator.cs" />
+    <Compile Include="Bonuses\DynamicBonusCreator.cs" />
+    <Compile Include="Bonuses\StaticBonusCreator.cs" />
     <Compile Include="Cell.cs" />
     <Compile Include="Bonuses\DynamicBonus.cs" />
+    <Compile Include="CellCretors\CellCreator.cs" />
+    <Compile Include="CellCretors\GrassCreator.cs" />
+    <Compile Include="CellCretors\GroundCreator.cs" />
+    <Compile Include="CellCretors\WaterCreator.cs" />
     <Compile Include="IGenerator.cs" />
     <Compile Include="Monsters\Bird.cs" />
     <Compile Include="Monsters\BirdCreator.cs" />

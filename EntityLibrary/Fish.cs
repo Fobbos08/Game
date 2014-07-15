@@ -18,23 +18,24 @@ namespace EntityLibrary
         protected override Vector NextStep(World world)
         {
 
-            MyVector.X = world.rnd.Next(-1, 2);
-            MyVector.Y = world.rnd.Next(-1, 2);
+            MyVector.X = world.RND.Next(-1, 2);
+            MyVector.Y = world.RND.Next(-1, 2);
             return MyVector;
         }
 
-        protected override void TimerTick(object source, System.Timers.ElapsedEventArgs e)
-        {
-            NextStep(world);
-            Position pp = new Position() { X = MyPosition.X, Y = MyPosition.Y };
-            pp.Add(MyVector, this.Speed);
-            Go(world.GetCell(pp));
-            if (EatPlayer(world.GetPlayer()))
-            {
-                // world.timer.Stop();
-                // world.Generate(world.CellWidth, world.CellHeight);
-            }
-        }
+        //protected override void TimerTick(object source, System.Timers.ElapsedEventArgs e)
+        //{
+        //    NextStep(world);
+        //    Position pp = new Position() { X = MyPosition.X, Y = MyPosition.Y };
+        //    pp.Add(MyVector, this.Speed);
+        //    Go(world.GetCell(pp));
+        //    if (EatPlayer(world.GetPlayer()))
+        //    {
+        //        FuncEatPlayerEvent(this, world.OnePlayer);
+        //        // world.timer.Stop();
+        //        // world.Generate(world.CellWidth, world.CellHeight);
+        //    }
+        //}
 
         protected override bool GoToCell(Cell cell)
         {

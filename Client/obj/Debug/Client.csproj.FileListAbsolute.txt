@@ -13,3 +13,5 @@ C:\Users\Эмиль\Documents\Visual Studio 2012\Projects\EPAM NET Express\Game\
 C:\Users\Эмиль\Documents\Visual Studio 2012\Projects\EPAM NET Express\Game\Client\bin\Debug\Microsoft.Practices.ServiceLocation.dll
 C:\Users\Эмиль\Documents\Visual Studio 2012\Projects\EPAM NET Express\Game\Client\bin\Debug\Microsoft.Practices.Unity.pdb
 C:\Users\Эмиль\Documents\Visual Studio 2012\Projects\EPAM NET Express\Game\Client\bin\Debug\Microsoft.Practices.Unity.xml
+C:\Users\Эмиль\Documents\Visual Studio 2012\Projects\EPAM NET Express\Game\Client\bin\Debug\Drawer.dll
+C:\Users\Эмиль\Documents\Visual Studio 2012\Projects\EPAM NET Express\Game\Client\bin\Debug\Drawer.pdb

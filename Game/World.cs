@@ -13,20 +13,20 @@ namespace Game
 {
     public class World
     {
-        public Random rnd = new Random();
+        public Random RND {get; private set;}
         private WorldGenerators.WorldGenerator generator;
-        public Timer timer;
+        public Timer WorldTimer {get; private set;}
         public Cell[,] map {get; set;}
         public int PixelsWidth { get; private set; }
         public int PixelsHeight { get; private set; }
         public int CellWidth { get; private set; }
         public int CellHeight {get; private set;}
-        public int sideSizeW;
-        public int sideSizeH;
-        public Player player;
+        public int SideSizeW {get; private set;}
+        public int SideSizeH {get; private set;}
+        public Player OnePlayer {get; private set;}
         public List<Monster> monsters;
-        public bool flag = false;
-        public int score = 0;
+        public bool Generated = false;
+        public int Score {get; private set;}
 
         public delegate void UpdateScoreHandler(World s);
         public event UpdateScoreHandler UpdateScoreEvent;
@@ -42,8 +42,10 @@ namespace Game
 
         public World(int width, int height, int cWidth, int cHeight)
         {
+            RND = new Random();
             CellWidth = cWidth;
             CellHeight = cHeight;
+
             var conteiner = new UnityContainer();
             conteiner.RegisterType<IGenerator<Cell[,]>, MapGenerator>(new InjectionConstructor(
                CellWidth, CellHeight));
@@ -59,16 +61,21 @@ namespace Game
             
 
 
-            timer = new Timer();
-            timer.Interval = 30;
-            timer.Start();
+           
             PixelsHeight = height;
             PixelsWidth = width;
+            WorldTimer = new Timer();
+            WorldTimer.Interval = 30;
+            OnePlayer = new Player(this) { MovedLevel = 2, MyPosition = new Position() { X = 20, Y = 20 }, MyVector = new Vector() { X = 1 }, Speed = 2 };
+            OnePlayer.EatBonusEvent += EatBonus;
+
             monsters = new List<Monster>();
-            player = new Player(this) { MovedLevel = 2, MyPosition = new Position() { X = 20, Y = 20 }, MyVector = new Vector() { X = 1 }, Speed = 2 };
-            player.EatBonusEvent += EatBonus;
-            sideSizeW = PixelsWidth / CellWidth;
-            sideSizeH = PixelsHeight / CellHeight;
+            
+            SideSizeW = PixelsWidth / CellWidth;
+            SideSizeH = PixelsHeight / CellHeight;
+
+            WorldTimer.Start();
+
             //monsters.Add(new Wolf(this) { MovedLevel = 1, MyPosition = new Position() { X = 100, Y = 100 }, MyVector = new Vector() { X = 1 }, Speed = 1 });
         }
 
@@ -85,8 +92,8 @@ namespace Game
 
         public Cell GetCell(Position pos)
         {
-            int x = pos.X / sideSizeW;
-            int y = pos.Y / sideSizeH;
+            int x = pos.X / SideSizeW;
+            int y = pos.Y / SideSizeH;
             if (x < 0 || x >= CellWidth) return null;
             if (y < 0 || y >= CellHeight) return null;
             return map[x, y];
@@ -94,37 +101,41 @@ namespace Game
 
         private void EatPlayer(Monster m, Player p)
         {
-            score = 0;
+            Score = 0;
+            FuncUpdateScoreEvent();
             Generate();
         }
 
         private void EatBonus(Bonus b, Player p)
         {
-            score++;
+            Score++;
             FuncUpdateScoreEvent();
         }
 
         public void Generate()
         {
-            flag = true;
-            timer.Stop();
-            player.Speed = 1;
-            player.MyVector.X = 0;
-            player.MyVector.Y = 0;
-            player.MyPosition.X = 20;
-            player.MyPosition.Y = 20;
+            Generated = true;
+            WorldTimer.Stop();
+            OnePlayer.Speed = 1;
+            OnePlayer.MyVector.X = 0;
+            OnePlayer.MyVector.Y = 0;
+            OnePlayer.MyPosition.X = 20;
+            OnePlayer.MyPosition.Y = 20;
             generator.Generate(this);
             for (int i = 0; i < monsters.Count; i++)
             {
                 monsters[i].EatPlayerEvent += EatPlayer;
+                //WorldTimer.Elapsed += monsters[i].TimerTick;
             }
-            timer.Start();
-            flag = false;
+
+
+            WorldTimer.Start();
+            Generated = false;
         }
 
         public Bonus GetBonus(Unit unit)
         {
-            return map[unit.MyPosition.X / sideSizeW, unit.MyPosition.Y / sideSizeH].bonus;
+            return map[unit.MyPosition.X / SideSizeW, unit.MyPosition.Y / SideSizeH].bonus;
         }
 
         public Cell[,] GetMap()
@@ -139,7 +150,7 @@ namespace Game
 
         public Player GetPlayer()
         {
-            return player;
+            return OnePlayer;
         }
     }
 }

@@ -10,6 +10,16 @@ namespace Game.WorldGenerators
     public class BonusGenerator : IGenerator<Bonus>
     {
         private Random rnd = new Random();
+        private LoadEntity le = new LoadEntity();
+        private List<BonusCreator> bc = new List<BonusCreator>();
+
+        public BonusGenerator()
+        {
+            bc.Add(new StaticBonusCreator());
+            bc.Add(new DynamicBonusCreator());
+            foreach (var a in le.LoadBonuses())
+                bc.Add(a);
+        }
 
         public Bonus Generate(World world)
         {
@@ -19,25 +29,13 @@ namespace Game.WorldGenerators
                 {
                     if (world.map[i, j].Level <= 1 && world.map[i, j].bonus==null) p.Add(new Position() { X = i, Y = j });
                 }
-
-            Bonus b;
-            int pos = rnd.Next(0, p.Count);
-            b = new StaticBonus(world) { MyPosition = new Position() { X = p[pos].X, Y = p[pos].Y } };
+            int pos = rnd.Next(0, p.Count-1);
             if (p.Count == 0) return null;
-            if (rnd.Next(0, 2) == 0)
-            {           
-                world.map[p[pos].X, p[pos].Y].bonus = b;
-                p.RemoveAt(pos);
-            }
-            else
-            {
-                DynamicBonus db = new DynamicBonus(world) { MyPosition = new Position() { X = b.MyPosition.X, Y = b.MyPosition.Y } };
-                db.SetBonus(b);
-                world.map[p[pos].X, p[pos].Y].bonus = db;
-                p.RemoveAt(pos);
-            }
-
-            return b;
+            int numberCreator = rnd.Next(0, bc.Count);
+            world.map[p[pos].X, p[pos].Y].bonus = bc[numberCreator].Create(world);
+            world.map[p[pos].X, p[pos].Y].bonus.MyPosition = new Position() { X = p[pos].X, Y = p[pos].Y };
+            p.RemoveAt(pos);
+            return world.map[p[pos].X, p[pos].Y].bonus;
         }
     }
 }

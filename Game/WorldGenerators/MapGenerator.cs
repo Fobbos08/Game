@@ -11,10 +11,17 @@ namespace Game.WorldGenerators
         private int width;
         private int height;
         private Random rnd = new Random();
+        private LoadEntity le = new LoadEntity();
+        private List<CellCretors.CellCreator> cc= new List<CellCretors.CellCreator>();
         public MapGenerator(int width, int height)
         {
             this.width = width;
             this.height = height;
+            cc.Add(new CellCretors.GroundCreator());
+            cc.Add(new CellCretors.GrassCreator());
+            cc.Add(new CellCretors.WaterCreator());
+            foreach (var a in le.LoadCells())
+                cc.Add(a);
         }
 
         public Cell[,] Generate(World world)
@@ -25,12 +32,7 @@ namespace Game.WorldGenerators
             {
                 for (int j = 0; j < height; j++)
                 {
-                    switch (rnd.Next(0, 3))
-                    {
-                        case 0: world.map[i, j] = new Cell() { Level = 0, Speed = 2 }; break;
-                        case 1: world.map[i, j] = new Cell() { Level = 1, Speed = 1 }; break;
-                        case 2: world.map[i, j] = new Cell() { Level = 2, Speed = 4 }; break;
-                    }
+                    world.map[i, j] = cc[rnd.Next(0, cc.Count)].Create();
                 }//дописать класс updater отвечающий за исправление ошибок генерации, либо дописать 
                 //приватный метод...  дописать волновой алгоритм
             }

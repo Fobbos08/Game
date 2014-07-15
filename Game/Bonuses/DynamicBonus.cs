@@ -15,20 +15,21 @@ namespace Game.Bonuses
         public DynamicBonus(World world)
             : base(world)
         {
-            world.timer.Elapsed += new ElapsedEventHandler(TimerTick);
+            world.WorldTimer.Elapsed += new ElapsedEventHandler(TimerTick);
         }
 
         public override void EatIt(Player player)
         {
+            bonus.MyPosition = MyPosition;
             base.EatIt(player);
-            world.timer.Elapsed -= TimerTick; 
+            world.WorldTimer.Elapsed -= TimerTick; 
             //world.DeleteThisBonus(this);
         }
 
         protected virtual void TimerTick(object source, ElapsedEventArgs e)
         {
             life--;
-            if (life < 0) { world.timer.Elapsed -= TimerTick; world.DeleteThisBonus(this); }
+            if (life < 0) { world.WorldTimer.Elapsed -= TimerTick; world.DeleteThisBonus(this); }
         }
 
     }

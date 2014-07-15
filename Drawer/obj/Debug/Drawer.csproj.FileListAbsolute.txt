@@ -1,0 +1,11 @@
+C:\Users\Эмиль\Documents\Visual Studio 2012\Projects\EPAM NET Express\Game\Drawer\bin\Debug\Drawer.dll
+C:\Users\Эмиль\Documents\Visual Studio 2012\Projects\EPAM NET Express\Game\Drawer\bin\Debug\Drawer.pdb
+C:\Users\Эмиль\Documents\Visual Studio 2012\Projects\EPAM NET Express\Game\Drawer\bin\Debug\Game.dll
+C:\Users\Эмиль\Documents\Visual Studio 2012\Projects\EPAM NET Express\Game\Drawer\bin\Debug\Microsoft.Practices.Unity.dll
+C:\Users\Эмиль\Documents\Visual Studio 2012\Projects\EPAM NET Express\Game\Drawer\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Users\Эмиль\Documents\Visual Studio 2012\Projects\EPAM NET Express\Game\Drawer\bin\Debug\Game.pdb
+C:\Users\Эмиль\Documents\Visual Studio 2012\Projects\EPAM NET Express\Game\Drawer\bin\Debug\Microsoft.Practices.Unity.pdb
+C:\Users\Эмиль\Documents\Visual Studio 2012\Projects\EPAM NET Express\Game\Drawer\bin\Debug\Microsoft.Practices.Unity.xml
+C:\Users\Эмиль\Documents\Visual Studio 2012\Projects\EPAM NET Express\Game\Drawer\obj\Debug\Drawer.csprojResolveAssemblyReference.cache
+C:\Users\Эмиль\Documents\Visual Studio 2012\Projects\EPAM NET Express\Game\Drawer\obj\Debug\Drawer.dll
+C:\Users\Эмиль\Documents\Visual Studio 2012\Projects\EPAM NET Express\Game\Drawer\obj\Debug\Drawer.pdb

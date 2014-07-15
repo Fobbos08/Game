@@ -18,17 +18,21 @@ namespace Game
         public Unit(World world)
         {
             this.world = world;
-            world.timer.Elapsed += new ElapsedEventHandler(TimerTick);
+            world.WorldTimer.Elapsed += new ElapsedEventHandler(TimerTick);
         }
 
-        protected virtual void TimerTick(object source, ElapsedEventArgs e) { }
+        public abstract void TimerTick(object source, ElapsedEventArgs e);
 
         protected virtual bool GoToCell(Cell cell)
         {
             if (cell == null) return false;
             if (cell.Level <= MovedLevel) return true;
-            return false;
+            return false;//дополнительный abstract метод
         }
+
+        
+
+
         protected void Go(Cell cell)
         {
             if (cell!=null)

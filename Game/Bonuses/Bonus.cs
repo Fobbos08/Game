@@ -9,6 +9,7 @@ namespace Game.Bonuses
     public abstract class Bonus
     {
         protected World world;
+        public string Name { get; set; }
         public Bonus(World world)
         {
             this.world = world;

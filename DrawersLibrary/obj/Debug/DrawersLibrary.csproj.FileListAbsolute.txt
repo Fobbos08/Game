@@ -1,0 +1,13 @@
+C:\Users\Эмиль\Documents\Visual Studio 2012\Projects\EPAM NET Express\Game\DrawersLibrary\bin\Debug\DrawersLibrary.dll
+C:\Users\Эмиль\Documents\Visual Studio 2012\Projects\EPAM NET Express\Game\DrawersLibrary\bin\Debug\DrawersLibrary.pdb
+C:\Users\Эмиль\Documents\Visual Studio 2012\Projects\EPAM NET Express\Game\DrawersLibrary\bin\Debug\Drawer.dll
+C:\Users\Эмиль\Documents\Visual Studio 2012\Projects\EPAM NET Express\Game\DrawersLibrary\bin\Debug\Game.dll
+C:\Users\Эмиль\Documents\Visual Studio 2012\Projects\EPAM NET Express\Game\DrawersLibrary\bin\Debug\Microsoft.Practices.Unity.dll
+C:\Users\Эмиль\Documents\Visual Studio 2012\Projects\EPAM NET Express\Game\DrawersLibrary\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Users\Эмиль\Documents\Visual Studio 2012\Projects\EPAM NET Express\Game\DrawersLibrary\bin\Debug\Drawer.pdb
+C:\Users\Эмиль\Documents\Visual Studio 2012\Projects\EPAM NET Express\Game\DrawersLibrary\bin\Debug\Game.pdb
+C:\Users\Эмиль\Documents\Visual Studio 2012\Projects\EPAM NET Express\Game\DrawersLibrary\bin\Debug\Microsoft.Practices.Unity.pdb
+C:\Users\Эмиль\Documents\Visual Studio 2012\Projects\EPAM NET Express\Game\DrawersLibrary\bin\Debug\Microsoft.Practices.Unity.xml
+C:\Users\Эмиль\Documents\Visual Studio 2012\Projects\EPAM NET Express\Game\DrawersLibrary\obj\Debug\DrawersLibrary.csprojResolveAssemblyReference.cache
+C:\Users\Эмиль\Documents\Visual Studio 2012\Projects\EPAM NET Express\Game\DrawersLibrary\obj\Debug\DrawersLibrary.dll
+C:\Users\Эмиль\Documents\Visual Studio 2012\Projects\EPAM NET Express\Game\DrawersLibrary\obj\Debug\DrawersLibrary.pdb
